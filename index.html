@@ -3,48 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Parking System</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <script src="https://unpkg.com/html5-qrcode"></script> <!-- QR Scanner Library -->
+    <title>QR Scanner | Smart Parking</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script defer src="scripts/qr-scanner.js"></script>
+    <link rel="stylesheet" href="styles/qr-scanner.css">
 </head>
 <body>
-
-    <header>
-        <h1>Smart Parking System</h1>
-    </header>
-
-    <nav>
-        <button onclick="showTab('qr-scanner')">QR Scanner</button>
-        <button onclick="showTab('parking-map')">Parking Map</button>
-        <button onclick="showTab('navigation')">Navigation</button>
-    </nav>
-
-    <main>
-        <!-- QR Scanner Section -->
-        <section id="qr-scanner" class="tab-content">
-            <h2>Scan QR Code</h2>
-            <div id="qr-reader"></div>
-            <p id="qr-result">Waiting for scan...</p>
-        </section>
-
-        <!-- Parking Map Section -->
-        <section id="parking-map" class="tab-content hidden">
-            <h2>Parking Map</h2>
-            <div class="parking-grid" id="parking-grid"></div>
-        </section>
-
-        <!-- Navigation Section -->
-        <section id="navigation" class="tab-content hidden">
-            <h2>Navigation</h2>
-            <p>Enter your destination:</p>
-            <input type="text" id="destination" placeholder="Enter parking slot number">
-            <button onclick="navigateToSlot()">Navigate</button>
-            <p id="navigation-result"></p>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-
+    <div class="qr-container">
+        <h1>Scan QR Code to Access Parking</h1>
+        <div id="qr-reader"></div>
+        <p id="scan-result">Waiting for scan...</p>
+    </div>
 </body>
 </html>

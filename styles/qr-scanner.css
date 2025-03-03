@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.qr-container {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#qr-reader {
+    display: block !important;
+    width: 90%;
+    max-width: 400px;
+    height: 60vh; /* Responsive height based on the viewport */
+    max-height: 400px; /* Maximum height to ensure it doesn't grow too large */
+    border: 3px solid white;
+    background-color: black; /* Ensure good contrast for the video feed */
+    margin: auto;
+}
+
+/* Make heading text responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    #qr-reader {
+        height: 50vh; /* Adjust the height for smaller screens */
+    }
+}
